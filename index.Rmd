@@ -11,8 +11,9 @@ library(flexdashboard)
 library(plotly)
 library(dplyr)
 
-netflix <-read.csv("https://firebasestorage.googleapis.com/v0/b/netflix-adolfo-centeno.appspot.com/o/datasets%2Fimdb.csv?alt=media&token=e8477369-f489-4d13-badf-2ba6c789ae62")
+netflix <-read.csv("https://raw.githubusercontent.com/jeaggo/datasets/master/imdb.csv")
 ```
+
 
 
 Generos
@@ -22,8 +23,9 @@ Column {data-width=650}
 
 ### Grafica 1
 PELICULAS AGRUPADAS POR GENERO
-LAS PELICULAS QUE MAS SE PRODUCEN SON LAS DE ACCION
+LAS PELICULAS QUE MAS SE PRODUCEN SON LAS DE ACCION (Obtenidas de Firebase Storage)
 
+     
 ```{r}
 df <- netflix
 df <- df %>% group_by(genre)
